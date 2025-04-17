@@ -1,0 +1,24 @@
+spring:
+  http:
+    encoding:
+      charset=UTF-8
+      enabled=true
+  application:
+    name: dickseek
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/dickseek?useSSL=false&serverTimezone=UTC
+    username: root
+    password: 1234
+
+deepseek:
+  api:
+    key: sk-d72585005bbf46eab454fd157c6d3450
+
+mybatis:
+  configuration:
+    map-underscore-to-camel-case: true #开启驼峰命名和下划线命名的自动转换
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+server:
+  port: 8080
+

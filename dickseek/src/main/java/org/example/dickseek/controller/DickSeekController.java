@@ -1,0 +1,28 @@
+package org.example.dickseek.controller;
+
+import org.example.dickseek.service.DickSeekService;
+import org.example.dickseek.pojo.Ticket;
+import org.springframework.web.bind.annotation.*;
+import reactor.core.publisher.Mono;
+
+import java.util.List;
+
+@CrossOrigin(origins ="*")
+@RestController
+@RequestMapping("/api/dickSeek")
+public class DickSeekController {
+
+    private final DickSeekService dickSeekService;
+
+    public DickSeekController(DickSeekService dickSeekService) {
+        this.dickSeekService = dickSeekService;
+    }
+
+    @PostMapping("/ask")
+    public Mono<String> askAI(@RequestBody String question) {
+
+        System.out.println("接受到了AI请求，正在返回");
+        return dickSeekService.getAIResponse(question);
+    }
+
+}
