@@ -10,9 +10,9 @@
     </parent>
     <groupId>org.example</groupId>
     <artifactId>dickseek</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
     <name>dickseek</name>
     <description>dickseek</description>
+    <version>1.1</version>
     <url/>
     <licenses>
         <license/>

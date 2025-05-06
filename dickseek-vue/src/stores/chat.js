@@ -22,16 +22,20 @@ export const useChatStore = defineStore('chat', () => {
           'Content-Type': 'text/plain'
         }
       })
-      
+      console.log(response);
+      console.log(response.data);
+      console.log(response.data.data);
       // 添加AI回复
       messages.value.push({
         role: 'assistant',
-        content: response.data
+        content: response.data.data
       })
+    
       
     } catch (err) {
       error.value = err.response?.data?.message || err.message
     } finally {
+      
       isLoading.value = false   
     }
   }
